@@ -228,6 +228,17 @@ export const appRouter = [
         children: [
             { path: 'index', title: '错误页面', name: 'errorpage_index', component: () => import('@/views/error-page/error-page.vue') }
         ]
+    },
+    {
+        path: '/my-page',
+        icon: 'social-github',
+        title: '我的页面',
+        name: 'mypage',
+        component: Main,
+        children: [
+            { path: 'index', title: '我的页面', name: 'mypage_index', icon: 'pricetags', component: () => import('@/views/my-page/index.vue') },
+            { path: 'test', title: '我的测试', name: 'mypage_test', icon: 'levels', component: () => import('@/views/my-page/test.vue') }
+        ]
     }
 ];
 

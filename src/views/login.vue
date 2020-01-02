@@ -39,6 +39,7 @@
 
 <script>
 import Cookies from 'js-cookie';
+const avator = require('@/images/avator.jpg');
 export default {
     data () {
         return {
@@ -62,7 +63,7 @@ export default {
                 if (valid) {
                     Cookies.set('user', this.form.userName);
                     Cookies.set('password', this.form.password);
-                    this.$store.commit('setAvator', 'https://avatars3.githubusercontent.com/u/37668403?s=400&u=5e58439f6ab4c85db107c7b128e253bd30d03577&v=4');
+                    this.$store.commit('setAvator', avator);
                     if (this.form.userName === 'iview_admin') {
                         Cookies.set('access', 0);
                     } else {
